@@ -1,0 +1,121 @@
+body {
+  background-color: #f1ecdf;
+  /* margin: 50px; */
+}
+
+.header {
+  background-color: #f1ecdf;
+  border-bottom: solid;
+  font-style: italic;
+  font-family: fantasy;
+}
+
+.login {
+  background-color: #f1ecdf;
+  width: 15rem;
+  align-items: center;
+  margin: auto;
+  margin-top: 10%;
+  padding: 1rem;
+  border: solid;
+}
+
+.signup {
+  background-color: #f1ecdf;
+  height: 31rem;
+  width: 15rem;
+  align-items: center;
+  margin: auto;
+  margin-top: 10%;
+  padding: 1rem;
+  border: solid;
+}
+
+.home {
+  background-color: #f1ecdf;
+  height: 18rem;
+  width: 15rem;
+  align-items: center;
+  margin: auto;
+  margin-top: 1.5%;
+  padding: 1rem;
+  border: solid;
+}
+
+.order {
+  background-color: #f1ecdf;
+  height: 20rem;
+  width: 15rem;
+  align-items: center;
+  margin: auto;
+  margin-top: 1.5%;
+  padding: 1rem;
+  border: solid;
+}
+
+.no-order {
+  background-color: #f1ecdf;
+  height: 5rem;
+  width: 15rem;
+  align-items: center;
+  margin: auto;
+  margin-top: 1.5%;
+  padding: 1rem;
+  border: solid;
+}
+
+.car {
+  background-color: #f1ecdf;
+  height: 20rem;
+  width: 15rem;
+  align-items: center;
+  margin: auto;
+  margin-top: 1.5%;
+  padding: 1rem;
+  border: solid;
+}
+
+.car-price {
+  background-color: #f1ecdf;
+  height: 15rem;
+  width: 15rem;
+  align-items: center;
+  margin: auto;
+  margin-top: 1.5%;
+  padding: 1rem;
+  border: solid;
+}
+
+.container {
+  position: relative;
+  background: linear-gradient(135deg, #b6e4f9, #f7b9bf);
+  width: 12rem;
+}
+
+.border {
+  border-width: 2px !important;
+}
+
+table {
+  width: 90% !important;
+  margin: auto;
+}
+
+th,
+td {
+  border: 0.5px solid;
+}
+
+a.sighting-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  z-index: 10;
+}
+
+.link {
+  color: inherit;
+}

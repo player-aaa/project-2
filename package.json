@@ -1,0 +1,38 @@
+{
+  "name": "project-2",
+  "version": "1.0.0",
+  "description": "# base-node-bootcamp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:create": "psql -d car_rental -f init_tables.sql",
+    "db:drop": "psql -d car_rental -f drop_tables.sql",
+    "db:data": "psql -d car_rental -f init_data.sql",
+    "db:clear": "psql -d car_rental -f clear_data.sql",
+    "db:check": "psql -d car_rental -f check_data.sql",
+    "db:try": "psql -d car_rental -f try_data.sql"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rocketacademy/birding-express-bootcamp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rocketacademy/birding-express-bootcamp/issues"
+  },
+  "homepage": "https://github.com/rocketacademy/birding-express-bootcamp#readme",
+  "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "nodemon": "^2.0.6"
+  },
+  "type": "module",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "pg": "^8.5.1"
+  }
+}

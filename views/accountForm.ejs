@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+
+    <link href="/styles.css" rel="stylesheet" type="text/css" />
+    <title>Account Form</title>
+  </head>
+  <script>  
+  function matchPassword() {  
+      if (document.getElementById('password').value ==
+      document.getElementById('confirm-password').value) {
+      document.getElementById('message').style.color = 'green';
+      document.getElementById('message').innerHTML = 'Matching';
+      } else {
+        document.getElementById('message').style.color = 'red';
+        document.getElementById('message').innerHTML = 'Not matching';
+      }
+  }  
+  </script>
+
+  <style>
+    body {
+      background-image: url("https://global.honda/top-page/assets/img/img-products01_pc.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+
+  <body>
+    <div class="header"><h1 class="text-center mb-0">Drive</h1></div>
+    <div class="signup">
+    <% if (locals.retryDetails) { %>
+      <div>
+      <form action="/signup" method="POST">
+        <label for="name">Name: </label><br />
+        <input type="text" id="name" name="name" value="<%= retryDetails.name %>"></input><br />
+        <label for="email">Email: </label><br />
+        <input type="email" id="email" name="email" value="<%= retryDetails.email %>"/><br />
+        <label for="phone">Phone: </label><br />
+        <input type="number" id="city" name="city" value="<%= retryDetails.phone %>"/><br />
+        <label for="age">Age: </label><br />
+        <input type="number" id="age" name="age" min="21" max="99" value="<%= retryDetails.age %>"/><br />
+        <label for="password">New Password: </label><br />
+        <input type="password" id="password" name="password"/><br />
+        <label for="confirm-password">Confirm Password: </label><br />
+        <input type="password" id="confirm-password" name="confirm-password"/><br/>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    <% } else { %>
+      <div>
+        <form action="/signup" method="POST">
+          <label for="name">Name: </label><br />
+          <input type="text" id="name" name="name"/><br />
+          <label for="email">Email: </label><br />
+          <input type="email" id="email" name="email"/><br />
+          <label for="phone">Phone: </label><br />
+          <input type="number" id="city" name="city" /><br />
+          <label for="age">Age: </label><br />
+          <input type="number" id="age" name="age" min="21" max="99"/><br />
+          <label for="password">New Password: </label><br />
+          <input type="password" id="password" name="password" onkeyup="matchPassword();"/><br />
+          <label for="confirm-password">Confirm Password: </label><br />
+          <input type="password" id="confirm-password" name="confirm-password" onkeyup="matchPassword()"/>
+          <span id="message"></span>
+          <br/><br/>
+          <input class="d-block mx-auto" type="submit" value="Submit" />
+        </form>
+      </div>
+    <% } %>
+    </div>
+  </body>
+</html>
