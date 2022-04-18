@@ -36,6 +36,7 @@ function replaceAll(str, find, replace) {
 
 const checkAuth = (req, res, next) => {
   const {userId} = req.cookies;
+  if (userId) {
   const values = [userId];
   // console.log(req.body.email)
   pool.query('SELECT * FROM user_accounts WHERE user_id=$1', values, (error, result) => {
@@ -47,6 +48,13 @@ const checkAuth = (req, res, next) => {
     };
 
     const user = result.rows[0];
+    // console.log(typeof user)
+    // if (typeof user == undefined) {
+    //   console.log('No authentication');
+    //   res.status(503).send(result.rows);
+    //   return;
+    // }
+
     const email = user.email
   
     const { loggedInHash } = req.cookies;
@@ -65,6 +73,10 @@ const checkAuth = (req, res, next) => {
     }
     next();
   } )
+  } else {
+    res.status(403).send('please login!');
+    return;
+  }
 }
 
 const insertNewData = (newData, tableName, columnName) => {
