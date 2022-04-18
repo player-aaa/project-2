@@ -48,13 +48,6 @@ const checkAuth = (req, res, next) => {
     };
 
     const user = result.rows[0];
-    // console.log(typeof user)
-    // if (typeof user == undefined) {
-    //   console.log('No authentication');
-    //   res.status(503).send(result.rows);
-    //   return;
-    // }
-
     const email = user.email
   
     const { loggedInHash } = req.cookies;
