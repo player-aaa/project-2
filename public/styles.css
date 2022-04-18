@@ -26,7 +26,18 @@ body {
   width: 15rem;
   align-items: center;
   margin: auto;
-  margin-top: 10%;
+  margin-top: 5%;
+  padding: 1rem;
+  border: solid;
+}
+
+.complete-signup {
+  background-color: #f1ecdf;
+  height: 12rem;
+  width: 15rem;
+  align-items: center;
+  margin: auto;
+  margin-top: 5%;
   padding: 1rem;
   border: solid;
 }
