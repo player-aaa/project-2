@@ -10,7 +10,8 @@
     "db:data": "psql -d car_rental -f init_data.sql",
     "db:clear": "psql -d car_rental -f clear_data.sql",
     "db:check": "psql -d car_rental -f check_data.sql",
-    "db:try": "psql -d car_rental -f try_data.sql"
+    "db:try": "psql -d car_rental -f try_data.sql",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
